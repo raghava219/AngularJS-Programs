@@ -1,0 +1,37 @@
+<!DoCTYPE html>
+
+<html ng-app>
+<head>
+   <title>Using 'ng-repeat' on Collections in AngularJS</title>
+   <script type="text/javascript" src="./controllers/angular.js"></script>
+   <script type="text/javascript" src="./controllers/CarCtrl.js"></script>
+</head>
+<body>
+
+   <div ng-controller="CarCtrl">
+
+        <p>{{description}}</p>
+
+        <p>{{cars}}</p>
+
+        <ul ng-repeat="car in cars">
+
+           <li>{{car.make}}</li>
+           <li>{{car.model}}</li>
+           <li>{{car.year}}</li>
+
+        </ul>
+
+          <p ng-repeat="car in cars">The make of your car is {{car.make}}</p>
+
+   </div>
+
+<div ng-controller="TrainCtrl">
+        <p>Train timings</p>
+        <p>{{trains}}</p>
+        <p ng-repeat="train in trains">Then train {{train.trainName}} will start at {{train.start}} and return at {{train.return}}</p>
+</div>
+
+
+</body>
+</html>

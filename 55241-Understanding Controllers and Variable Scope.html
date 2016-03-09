@@ -1,0 +1,34 @@
+<!DoCTYPE html>
+
+<html ng-app>
+<head>
+   <title>55241-Understanding Controllers and Variable Scope</title>
+   <script type="text/javascript" src="controllers/angular.js"></script>
+   <script type="text/javascript" src="controllers/CarCtrl.js"></script>
+</head>
+<body>
+
+   <div ng-controller="CarCtrl">
+
+        <p>{{description}}</p>
+
+        <p>{{cars}}</p>
+
+   </div>
+
+    <!-- bikes will not display as it is out of scope -->
+   <div ng-controller="CarCtrl">
+
+   		<p>{{bikes}}</p>
+
+   </div>
+
+   <div ng-controller="TrainCtrl">
+
+        <p>{{train}}</p>
+
+   </div>
+
+
+</body>
+</html>

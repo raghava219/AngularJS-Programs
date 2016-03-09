@@ -1,0 +1,6 @@
+INDEX VERSION 1.3+C:\Raghava\KnowledgeBase\Vedios\AngularJS\NodeMongoAngular\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+3255711101.index
+3122648822.index
+3194949798.index
+588678988.index
+41420006.index

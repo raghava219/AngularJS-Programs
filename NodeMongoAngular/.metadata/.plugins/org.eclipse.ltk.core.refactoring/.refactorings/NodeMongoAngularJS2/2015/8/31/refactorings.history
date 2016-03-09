@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;auth_server.js&apos; to &apos;step 6.1&apos;" description="Move &apos;auth_server.js&apos; to &apos;step 6.1&apos;" destination="Lession6/step 6.1" element1="Lession6/auth_server.js" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1438448881036" updateReferences="true"/>
+</session>

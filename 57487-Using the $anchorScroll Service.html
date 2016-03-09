@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html ng-app>
+<head>
+	<title>Angular JS AnchorScroll Service Demo</title>
+	<script src="controllers/anchorScroll/angular.js"></script>
+	<script src="js/angularLib/angular-resource.min.js"></script>
+	<script src="controllers/anchorScroll/app.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css"/>
+	<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body>
+	<div>
+		<div id="scrollDiv" ng-controller="ScrollController">
+			<a id="topLink" ng-click="jumpToBottom()">This is Top. Click to go to Bottom.</a>
+			<a id="topLink" ng-click="jumpToTop()">This is BOTTOM. Click to go back to Top</a>
+		</div>
+	</div>
+</body>
+</html>

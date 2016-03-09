@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;NodeMongoAngularJS1/Lesson5/directives/static/js/one.xml&apos;" deleteContents="false" description="Delete resource &apos;NodeMongoAngularJS1/Lesson5/directives/static/js/one.xml&apos;" element1="/NodeMongoAngularJS1/Lesson5/directives/static/js/one.xml" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1438101327712"/>
+</session>
