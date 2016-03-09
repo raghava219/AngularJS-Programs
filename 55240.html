@@ -4,8 +4,13 @@
 <head>
      <title>55240-Setting Up Your AngularJS Environment</title>
      <script type="text/javascript" src="angular.js"></script>
+     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 </head>
 <body>
-
+     <div ng-app="">
+          <p>Enter your First Name</p>
+          <p><input type="text" ng-model="name"/></p>
+          <H1>Hello {{name}}</H1>
+     </div>
 </body>
 </html>
