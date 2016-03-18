@@ -3,11 +3,11 @@
 <html ng-app="myApp">
 <head>
 <title></title>
-<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
-<!--<script type="text/javascript" src="controllers/CustomFilters/app.js"></script> -->
-<script>
-	var myApp = angular.module('myApp',[]);
-	myApp.controller('appController',function($scope){
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<!-- <script type="text/javascript" src="controllers/CustomFilters/app.js"></script> -->
+<script type="text/javascript">
+	var myApp1 = angular.module('myApp',[]);
+	myApp1.controller('appController',function($scope){
 	$scope.specialsList ={
 		"Apple":{"name":"Apple","priceInDollars":1.50},
 		"Banana":{"name":"Banana","priceInDollars":2},
@@ -18,14 +18,24 @@
 	$scope.description = "This Controller contains a list of food item";
 	});
 	
-	myApp.filter('dashes',function(){
-	
-		return function(text){
-			var chars = text.split("");
+	myApp1.filter('dashes',function(){
+		return function(text){ 
+			var chars = text.split('');
 			return chars.join("-");
 		}
-	
 	});
+	
+		/*todoApp.filter("checkedItems", function(){
+		     return function(items, showComplete){
+			     var resultArr = [];
+				 angular.forEach(items, function(item){
+				      if(item.done == false || showComplete == true){
+					      resultArr.push(item);
+					  }
+				 });
+				 return resultArr;
+			 }
+		});*/
 	
 </script>
 
@@ -34,7 +44,7 @@
 	<div ng-controller="appController">
 		<p> {{description}} </p>		
 		<ul ng-repeat="food in specialsList">
-			<li>Food name: {{food.name | dashes}}</li>
+			<li>Food name: {{food.name  | dashes}}</li>
 			<li>Food name: {{food.priceInDollars | currency}}</li>
 		</ul>
 	</div>
