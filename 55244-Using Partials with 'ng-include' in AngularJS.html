@@ -4,7 +4,20 @@
 <head>
    <title>Using Partials</title>
    <script type="text/javascript" src="controllers/angular.js"></script>
-   <script type="text/javascript" src="controllers/app.js"></script>
+   <!--<script type="text/javascript" src="controllers/app.js"></script>-->
+   <script>
+      var myApp = angular.module('myApp', []);
+      myApp.controller('appController',function($scope){
+            $scope.specialsList = {
+               "Apple":{"name":"Apple","priceInDollars":1.50},
+               "Banana":{"name":"Banana","priceInDollars":4.50},
+               "Cherry":{"name":"Cherry","priceInDollars":2.50},
+               "Honey":{"name":"Honey","priceInDollars":6.50}
+            };
+            $scope.description = "This controller contains a list of food specials";
+            $scope.foodListURL = "./FoodList.html";
+      });
+   </script>
 </head>
 <body>
 
