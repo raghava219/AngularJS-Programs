@@ -5,6 +5,16 @@
 <title></title>
 <script type="text/javascript" src="controllers/Working With User Input/angular.js"></script>
 <script type="text/javascript" src="controllers/Working With User Input/app.js"></script>
+<script>
+	var myApp = angular.module('myApp',[]);
+	myApp.controller('appController',function($scope){
+		$scope.model = {
+		    firstName: 'John',
+		    lastName: 'Doe'		
+		};
+	
+	});
+</script>
 </head>
 <body>
 
