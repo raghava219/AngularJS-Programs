@@ -1,10 +1,40 @@
 <!DoCTYPE html>
 
-<html ng-app>
+<html ng-app="myApp">
 <head>
    <title>Using 'ng-repeat' on Collections in AngularJS</title>
    <script type="text/javascript" src="./controllers/angular.js"></script>
-   <script type="text/javascript" src="./controllers/CarCtrl.js"></script>
+   <!--<script type="text/javascript" src="./controllers/CarCtrl.js"></script>-->
+   <script>
+      var myApp1 = angular.module('myApp', []);
+
+            myApp1.controller('CarCtrl', function($scope){
+                $scope.cars = {
+                "BMW":{"make":"BMW", "model":"1 Series", "year":"2010"},
+                "Audi":{"make":"Audi", "model":"A4", "year":"2008"},
+            	 "Mercedes":{"make":"Mercedes", "model":"C-Class", "year":"2009"},
+            	 "Honda":{"make":"Honda", "model":"C-Class", "year":"2009"},
+                "Maruthi":{"make":"India", "model":"First","year":"2015"}
+                };
+                $scope.description = "This controller contains a list of cars";
+            });
+            
+            myApp1.controller('BikeCtrl', function($scope){
+               $scope.bike ={
+            	   "Activa":{"make":"Honda","model":"good","year":"2013"},
+            	   "Bajaj":{"make":"Bajaj","model":"bad","year":"2014"},
+            	   "Hiabusa":{"make":"Japan","model":"old","year":"2011"}
+               };
+               $scope.description= "This is the description of bike";
+            });
+            
+            myApp1.controller('TrainCtrl', function($scope) {
+                $scope.trains = {
+            	    "Tandur Express":{"trainName":"Tandur Express","start":"10","return":"2"},
+            	    "Hydera Express1":{"trainName":"Hyder Express","start":"10","return":"3"}
+            	};
+            });
+   </script>
 </head>
 <body>
 
