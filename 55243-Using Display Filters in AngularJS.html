@@ -4,7 +4,24 @@
 <head>
    <title></title>
    <script type="text/javascript" src="controllers/angular.js"></script>
-   <script type="text/javascript" src="controllers/SpecialsListCtrl.js"></script>
+   <!--<script type="text/javascript" src="controllers/SpecialsListCtrl.js"></script>-->
+   <script>
+   	var myApp = angular.module('myApp', []);
+
+	myApp.controller('SpecialsListCtrl', function($scope) {
+	
+	    $scope.specialsList = {
+		"Apple":{"name":"Apple","priceInDollars":1.50,"salePriceInDollars":"1","specialDate":"Monday"},
+		"Banana":{"name":"Banana","priceInDollars":6.50,"salePriceInDollars":"1.67","specialDate":"Tuesday"},
+		"Cherry":{"name":"Cherry","priceInDollars":1.80,"salePriceInDollars":"5","specialDate":"Wednesday"},
+		"Eggs":{"name":"Eggs","priceInDollars":18.0,"salePriceInDollars":"7.9","specialDate":"Friday"},
+		"Figs":{"name":"Figs","priceInDollars":10.0,"salePriceInDollars":"1","specialDate":"Saturday"},
+	    };
+	
+	    $scope.description = "this list contain a list of food specials";
+	});
+   	
+   </script>
 </head>
 <body>
 
