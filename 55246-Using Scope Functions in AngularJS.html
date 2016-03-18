@@ -4,8 +4,21 @@
 <head>
 <title></title>
 <script type="text/javascript" src="controllers/ScopeFunctions/angular.js"></script>
-<script type="text/javascript" src="controllers/ScopeFunctions/app.js"></script>
-<script type="text/javascript" src="controllers/ScopeFunctions/mycontroller.js"></script>
+<!--<script type="text/javascript" src="controllers/ScopeFunctions/app.js"></script>
+<script type="text/javascript" src="controllers/ScopeFunctions/mycontroller.js"></script>-->
+<script>
+	var myApp = angular.module('myApp',[]);
+	myApp.controller('appController',function($scope){
+		$scope.firstName = '';
+	        $scope.lastName = '';
+	        $scope.setName = function($fName,$lName){
+	            $scope.firstName = $fName;
+	            $scope.lastName = $lName;
+		}
+	
+	});
+</script>
+
 </head>
 <body>
 
