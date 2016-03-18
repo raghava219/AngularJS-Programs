@@ -4,8 +4,30 @@
 <head>
 <title></title>
 <script type="text/javascript" src="controllers/ng-click/angular.js"></script>
-<script type="text/javascript" src="controllers/ng-click/app.js"></script>
-<script type="text/javascript" src="controllers/ng-click/script.js"></script>
+<!--<script type="text/javascript" src="controllers/ng-click/app.js"></script>
+<script type="text/javascript" src="controllers/ng-click/script.js"></script>-->
+<script>
+	var myApp = angular.module('myApp',[]);
+
+		myApp.controller('appController',function($scope){
+			$scope.firstName = '';
+			$scope.lastName = '';
+			$scope.setName = function($fName,$lName){
+		    	    $scope.firstName = $fName;
+		            $scope.lastName = $lName; 
+			}
+		});
+		function randomFunction(){
+		   alert('Hello (from outside of Angular) World');
+		}
+		function randomFunction2(e1){
+		    var $scope = angular.element(e1).scope();
+		    $scope.firstName = "John";
+		    $scope.lastName = "Doe";
+		    $scope.$apply();
+		}
+</script>
+
 </head>
 <body>
 
