@@ -1,13 +1,12 @@
-<!DoCTYPE html>
+<!DOCTYPE html>
 
 <html ng-app="myApp">
 <head>
    <title>Using 'ng-repeat' on Collections in AngularJS</title>
-   <script type="text/javascript" src="./controllers/angular.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
    <!--<script type="text/javascript" src="./controllers/CarCtrl.js"></script>-->
-   <script>
+   <script type="text/javascript">
       var myApp1 = angular.module('myApp', []);
-
             myApp1.controller('CarCtrl', function($scope){
                 $scope.cars = {
                 "BMW":{"make":"BMW", "model":"1 Series", "year":"2010"},
@@ -18,16 +17,7 @@
                 };
                 $scope.description = "This controller contains a list of cars";
             });
-            
-            myApp1.controller('BikeCtrl', function($scope){
-               $scope.bike ={
-            	   "Activa":{"make":"Honda","model":"good","year":"2013"},
-            	   "Bajaj":{"make":"Bajaj","model":"bad","year":"2014"},
-            	   "Hiabusa":{"make":"Japan","model":"old","year":"2011"}
-               };
-               $scope.description= "This is the description of bike";
-            });
-            
+                        
             myApp1.controller('TrainCtrl', function($scope) {
                 $scope.trains = {
             	    "Tandur Express":{"trainName":"Tandur Express","start":"10","return":"2"},
